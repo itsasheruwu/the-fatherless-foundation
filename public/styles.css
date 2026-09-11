@@ -17,3 +17,10 @@ footer>a:last-of-type{min-height:44px;display:flex;align-items:center}
 @media(max-width:760px){.hero{padding-top:22px;padding-bottom:70px}.hero-copy{max-width:100%}.hero-art{height:260px;top:auto;bottom:auto;width:100%;margin-top:24px}.hero-note{font-size:12px;max-width:100%;bottom:16px}.hero .eyebrow{font-size:10px}.hero-mission{font-size:16px;max-width:350px}.closing h2{font-size:36px}.header nav a{display:flex}.menu-toggle{min-height:44px}.progress .eyebrow{font-size:10px}.brand span{font-size:9px;letter-spacing:1.4px}}
 .hero-art img{object-fit:contain;object-position:center;mask-image:none}
 @media(max-width:760px){.hero-art{height:300px}.hero-art img{object-fit:contain}}
+
+/* Preserve the supplied photo; fade its edges into the page using CSS. */
+.hero-art{right:0;display:flex;align-items:center;justify-content:center}
+.hero-art img{height:auto;max-height:100%;width:100%;object-fit:contain;opacity:1;mask-image:linear-gradient(to right,transparent,#000 9%,#000 94%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 80%,transparent);mask-composite:intersect}
+@media(max-width:760px){.hero-art{height:auto;aspect-ratio:1104/986;max-height:none}.hero-art img{height:auto;max-height:none}}
+.hero-art img{width:auto;height:100%;max-width:100%}
+@media(max-width:760px){.hero-art img{width:100%;height:auto}}

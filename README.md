@@ -16,6 +16,10 @@ Responsive navigation, native expandable FAQs, copy-link sharing, focus states, 
 
 ## Deploy
 
-Cloudflare Workers Static Assets. Upload the contents of `public/` in the Cloudflare dashboard, or run `npx wrangler deploy` with authorized credentials. Custom domain: https://thefatherlessfoundation.com.
+Cloudflare Workers Builds is connected to `itsasheruwu/the-fatherless-foundation`. Every push or merged pull request to `main` automatically deploys `public/` to https://thefatherlessfoundation.com. Other branches do not deploy.
+
+The connection is managed in Cloudflare → Workers & Pages → the-fatherless-foundation → Settings → Builds. It uses the repository root, no build command, and `npx wrangler deploy`; `wrangler.jsonc` selects `public/` as the static assets directory. Deployment credentials are managed by Cloudflare and are not stored in this repository.
+
+Check the build status in Cloudflare or the GitHub commit checks, then verify the live custom domain. A failed build leaves the previous deployment live. Manual fallback: run `npx wrangler deploy` with authorized credentials.
 
 Fonts: Google Fonts, DM Sans and Barlow Condensed, with local fallbacks. Generated artwork is illustrative.

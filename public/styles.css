@@ -28,3 +28,8 @@ footer>a:last-of-type{min-height:44px;display:flex;align-items:center}
 .story{border-top:1px solid var(--line)}
 .story-faith{margin-top:36px;margin-bottom:18px}
 .progress{padding-top:55px}
+
+.faith-verse{margin:28px 0 18px;padding-left:20px;border-left:2px solid var(--blue)}
+.faith-verse p{font-size:17px;line-height:1.6;margin-bottom:10px}
+.faith-verse cite{font-size:12px;font-style:normal;color:var(--silver)}
+.faith-verse a{text-decoration:underline;text-underline-offset:4px}

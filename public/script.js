@@ -40,12 +40,30 @@ shareButton.addEventListener('click', async () => {
 });
 
 const verseToggle = document.querySelector('.verse-toggle');
-const originalVerse = document.querySelector('#verse-original');
-if (verseToggle && originalVerse) {
+const verseText = document.querySelector('#verse-text');
+const verseSource = document.querySelector('.verse-source');
+if (verseToggle && verseText && verseSource) {
+  const hebrew = verseText.textContent;
+  const hebrewSource = verseSource.href;
+  const translation = '“Defend the weak and the fatherless; uphold the cause of the poor and the oppressed.”';
+  let verseAnimation;
   verseToggle.addEventListener('click', () => {
-    const expanded = verseToggle.getAttribute('aria-expanded') !== 'true';
-    verseToggle.setAttribute('aria-expanded', String(expanded));
-    originalVerse.hidden = !expanded;
-    verseToggle.textContent = expanded ? 'Hide original' : 'Show original';
+    const translated = verseToggle.getAttribute('aria-pressed') !== 'true';
+    verseAnimation?.cancel();
+    verseToggle.setAttribute('aria-pressed', String(translated));
+    verseToggle.textContent = translated ? 'Hide translation' : 'Show translation';
+    verseText.textContent = translated ? translation : hebrew;
+    verseText.lang = translated ? 'en' : 'he';
+    verseText.dir = translated ? 'ltr' : 'rtl';
+    verseSource.textContent = translated ? 'Psalm 82:3 (NIV)' : 'Psalm 82:3 (Hebrew)';
+    verseSource.href = translated
+      ? 'https://www.biblegateway.com/passage/?search=Psalm%2082%3A3&version=NIV'
+      : hebrewSource;
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      verseAnimation = verseText.animate(
+        [{ opacity: 0, transform: 'translateY(4px)' }, { opacity: 1, transform: 'translateY(0)' }],
+        { duration: 220, easing: 'ease-out' }
+      );
+    }
   });
 }

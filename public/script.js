@@ -38,3 +38,14 @@ shareButton.addEventListener('click', async () => {
     shareButton.disabled = false;
   }
 });
+
+const verseToggle = document.querySelector('.verse-toggle');
+const originalVerse = document.querySelector('#verse-original');
+if (verseToggle && originalVerse) {
+  verseToggle.addEventListener('click', () => {
+    const expanded = verseToggle.getAttribute('aria-expanded') !== 'true';
+    verseToggle.setAttribute('aria-expanded', String(expanded));
+    originalVerse.hidden = !expanded;
+    verseToggle.textContent = expanded ? 'Hide original' : 'Show original';
+  });
+}

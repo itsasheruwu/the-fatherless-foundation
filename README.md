@@ -8,7 +8,7 @@ Run `npm run dev`, then open http://localhost:4173. No build dependencies are ne
 
 ## Design
 
-`design/homepage-mockup-v2.png` is the implemented imagegen concept: graphite, silver, ice blue, bold type and a three-pillar foundation emblem. `public/assets/foundation-pillars.jpg` is the generated standalone hero artwork. The rejected initial direction is preserved in `design/archive-v1/` and `design/homepage-mockup.png` for local reference and is not deployed.
+`design/homepage-mockup-v2.png` is the implemented imagegen concept: graphite, silver, ice blue, bold type and a three-pillar foundation emblem. The family illustration from the first direction is used in the hero; the founders photo sits in Our Story. `design/archive-v1/` and `design/homepage-mockup.png` remain local reference.
 
 ## Behavior and scope
 

@@ -46,9 +46,9 @@ footer>a:last-of-type{min-height:44px;display:flex;align-items:center}
 .field-note figure{margin:0}
 .field-note-image{position:relative;width:min(1600px,calc(100% - 48px));margin-inline:auto;aspect-ratio:16/8.2;overflow:hidden;border:1px solid var(--line);background:#181a1b}
 .field-note-image::after{content:'';position:absolute;inset:0;border-top:3px solid var(--blue);pointer-events:none}
-.field-note-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 49%;filter:contrast(1.03)}
+.field-note-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 49%;filter:contrast(1.03);transform:scale(1.1)}
 .field-note-caption{display:grid;grid-template-columns:.6fr 1.4fr;gap:45px;align-items:start;padding-top:34px;padding-bottom:78px}
 .field-note-caption .eyebrow{margin-top:11px;color:var(--silver)}
-.field-note-caption h2{font-family:var(--display);font-size:clamp(52px,5.4vw,82px);font-weight:800;line-height:.88;letter-spacing:-1.5px;margin-bottom:22px}
+.field-note-caption h2{font-family:var(--display);font-size:clamp(52px,5.4vw,82px);font-weight:800;line-height:.88;letter-spacing:-1.5px;margin-bottom:22px;white-space:nowrap}
 .field-note-caption>div>p{max-width:520px;color:var(--silver);font-size:16px;line-height:1.65;margin-bottom:0}
-@media(max-width:760px){.field-note{padding-top:20px}.field-note-image{width:100%;aspect-ratio:4/3;border-inline:0}.field-note-caption{grid-template-columns:1fr;gap:10px;padding-top:28px;padding-bottom:56px}.field-note-caption .eyebrow{margin:0 0 12px}.field-note-caption h2{font-size:58px;margin-bottom:18px}.field-note-caption>div>p{font-size:15px}}
+@media(max-width:760px){.field-note{padding-top:20px}.field-note-image{width:100%;aspect-ratio:4/3;border-inline:0}.field-note-caption{grid-template-columns:1fr;gap:10px;padding-top:28px;padding-bottom:56px}.field-note-caption .eyebrow{margin:0 0 12px}.field-note-caption h2{font-size:58px;margin-bottom:18px;white-space:normal}.field-note-caption h2 .accent{display:block}.field-note-caption>div>p{font-size:15px}}
